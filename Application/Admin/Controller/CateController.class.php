@@ -7,8 +7,11 @@ class CateController extends Controller
 {
 	public function create()
 	{
-		$pids = M('bbs_part')->select();
-		$this->assign('pids', $pids);
+		$users = M('bbs_user')->select(); 
+		$pids  = M('bbs_part')->select();
+
+		$this -> assign('users', $users);
+		$this -> assign('pids', $pids);
 		$this -> display();
 	}
 
@@ -47,16 +50,36 @@ class CateController extends Controller
 
 	public function edit()
 	{
-
+		$cid   = $_GET['cid'];
+		$parts = M('bbs_part')->select();
+		$cate  = M('bbs_cate')->where("cid=$cid")->find();
+		$users = M('bbs_user')->select();
+		
+		$this -> assign('users', $users);
+		$this -> assign('parts', $parts);
+		$this -> assign('cate', $cate);
+		$this -> display();
 	}
 
 	public function update()
 	{
-
+		$cid = $_GET['cid'];
+		$row = M('bbs_cate')->where("cid=$cid")->save($_POST);
+		if ($row) {
+			$this -> success('修改数据成功');
+		} else {
+			$this -> error('修改数据失败');
+		}
 	}
 
 	public function del()
 	{
-
+		$cid = $_GET['cid'];
+		$row = M('bbs_cate')->delete($cid);
+		if ($row) {
+			$this -> success('删除数据成功');
+		} else {
+			$this -> error('删除数据失败');
+		}
 	}
 }

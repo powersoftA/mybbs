@@ -67,15 +67,15 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/index.php?m=admin&c=cate&a=save" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="/index.php?m=admin&c=cate&a=update&cid=<?php echo $cate['cid'] ?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
                         <tr>
-                            <th width="120"><i class="require-red">*</i>分区ID：</th>
+                            <th width="120"><i class="require-red">*</i>分区名称：</th>
                             <td>
                                 <select name="pid" id="catid" class="required">
-                                	<?php foreach($pids as $pid): ?>
-                                    <option value="<?php echo ($pid["pid"]); ?>"><?php echo ($pid["pname"]); ?></option>
+                                	<?php foreach($parts as $part): ?>
+                                    <option value="<?php echo ($part["pid"]); ?>"><?php echo ($part["pname"]); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </td>
@@ -83,14 +83,14 @@
                             <tr>
                                 <th><i class="require-red">*</i>分类标题：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="cname" size="50" value="" type="text">
+                                    <input class="common-text required" id="title" name="cname" size="50" value="<?php echo $cate['cname'] ?>" type="text">
                                 </td>
                             </tr>
                         <tr>
-                            <th width="120"><i class="require-red">*</i>分区名称：</th>
+                            <th width="120"><i class="require-red">*</i>版主：</th>
                             <td>
                                 <select name="uid" id="catid" class="required">
-                                    <?php foreach($users as $user): ?>
+                                	<?php foreach($users as $user): ?>
                                     <option value="<?php echo ($user["uid"]); ?>"><?php echo ($user["uname"]); ?></option>
                                     <?php endforeach; ?>
                                 </select>

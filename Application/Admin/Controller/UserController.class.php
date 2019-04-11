@@ -58,7 +58,7 @@ class UserController extends Controller
     	$_POST['created_at'] = time();
 
     	//对密码加密
-    	$_POST['upwd'] = password_hash($_POST['uowd'], PASSWORD_DEFAULT);
+    	$_POST['upwd'] = password_hash($_POST['upwd'], PASSWORD_DEFAULT);
 
         //上传图片
         $fileName = $this -> doUp();

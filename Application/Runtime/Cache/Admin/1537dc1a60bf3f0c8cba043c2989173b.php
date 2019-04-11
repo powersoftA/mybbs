@@ -118,8 +118,8 @@
                             <td><?php echo $parts[$cate['pid']] ?></td>
                             <td><?php echo $users[$cate['uid']] ?></td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="/index.php?m=admin&c=cate&a=edit&cid=<?php echo $cate['cid'] ?>">修改</a>
+                                <a class="link-del" href="/index.php?m=admin&c=cate&a=del&cid=<?php echo $cate['cid'] ?>">删除</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
