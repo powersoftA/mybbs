@@ -1,0 +1,12 @@
+[ 2019-04-07T13:45:46+08:00 ] 127.0.0.1 /public/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+ERR: 无法加载模块:Public
+
+[ 2019-04-07T13:45:54+08:00 ] 127.0.0.1 /public/index.php/index/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+ERR: 无法加载模块:Public
+
