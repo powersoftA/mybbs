@@ -20,9 +20,9 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#">管理员</a></li>
+                <li><a href="#"><?= $_SESSION['userInfo']['uname'] ?></a></li>
                 <li><a href="#">修改密码</a></li>
-                <li><a href="#">退出</a></li>
+                <li><a href="/index.php?m=admin&c=login&a=logout">退出</a></li>
             </ul>
         </div>
     </div>
@@ -49,10 +49,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="icon-font">&#xe018;</i>分类管理</a>
+                    <a href="#"><i class="icon-font">&#xe018;</i>版块管理</a>
                     <ul class="sub-menu">
-                        <li><a href="/index.php?m=admin&c=cate&a=create"><i class="icon-font">&#xe017;</i>添加分类</a></li>
-                        <li><a href="/index.php?m=admin&c=cate&a=index"><i class="icon-font">&#xe037;</i>显示分类</a></li>
+                        <li><a href="/index.php?m=admin&c=cate&a=create"><i class="icon-font">&#xe017;</i>添加版块</a></li>
+                        <li><a href="/index.php?m=admin&c=cate&a=index"><i class="icon-font">&#xe037;</i>显示版块</a></li>
                     </ul>
                 </li>
             </ul>

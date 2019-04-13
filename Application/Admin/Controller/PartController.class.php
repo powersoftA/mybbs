@@ -3,7 +3,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class PartController extends Controller
+class PartController extends CommonController
 {
 	public function create()
 	{
